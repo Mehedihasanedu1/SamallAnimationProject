@@ -66,15 +66,15 @@ public class MainActivity extends AppCompatActivity {
                    title.setText(titlestring);
                    body.setText(bodysting);
 
-                dailog.setView(ll);
+               /* dailog.setView(ll);
                 AlertDialog  alertDialog = dailog.create();
                 alertDialog.show();
-                alertDialog.getWindow().setLayout(900, 1200);
+                alertDialog.getWindow().setLayout(900, 1200);*/
 
                 // Toast.makeText(MainActivity.this, "position"+position, Toast.LENGTH_SHORT).show();
 
-              //  dailog.setView(ll);
-              //  dailog.show();
+               dailog.setView(ll);
+               dailog.show();
 
 
             }
