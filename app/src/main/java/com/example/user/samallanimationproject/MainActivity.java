@@ -1,12 +1,14 @@
 package com.example.user.samallanimationproject;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                  String titlestring = userlist.get(position).getTitle();
                  String bodysting  = userlist.get(position).getBody();
 
-                 Intent intent = new Intent(MainActivity.this, ShowDataActivity.class);
+                // Intent intent = new Intent(MainActivity.this, ShowDataActivity.class);
 
                  Bundle b = new Bundle();
                  b.putString("mes",titlestring);
@@ -59,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
                // intent = new Intent(MainActivity.this, ShowDataActivity.class);
 
-                intent.putExtras(b);
-                startActivity(intent);
+               // intent.putExtras(b);
+               // startActivity(intent);
 
               //   startActivity(new Intent(MainActivity.this,ShowDataActivity.class));
 
 
-                /*AlertDialog.Builder  dailog  = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder  dailog  = new AlertDialog.Builder(MainActivity.this);
 
                 LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
                 final LinearLayout ll = (LinearLayout) inflater.inflate(R.layout.alartdailog_single_row,null,false);
@@ -76,15 +78,16 @@ public class MainActivity extends AppCompatActivity {
                    title.setText(titlestring);
                    body.setText(bodysting);
 
-                dailog.setView(ll);
+                /*dailog.setView(ll);
                 AlertDialog  alertDialog = dailog.create();
                 alertDialog.show();
-                alertDialog.getWindow().setLayout(900, 1200);
+                alertDialog.getWindow().setLayout(900, 1200);*/
 
                 // Toast.makeText(MainActivity.this, "position"+position, Toast.LENGTH_SHORT).show();
+                dailog.setNegativeButton("Close",null);
 
                dailog.setView(ll);
-               dailog.show();*/
+               dailog.show();
 
 
             }

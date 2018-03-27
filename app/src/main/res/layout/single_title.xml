@@ -12,7 +12,7 @@
     android:layout_margin="8dp"
     android:maxWidth="5dp"
     android:elevation="14dp"
-    android:foreground="@color/cardview_shadow_start_color">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,16 +22,14 @@
         >
 
         <TextView
-            android:background="@color/cardview_shadow_start_color"
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:gravity="center"
             android:transitionName="name"
             android:text="Hello"
-            style="@style/AppTheme"
             android:textStyle="bold"
-            android:textSize="15dp" />
+            android:textSize="12sp" />
 
     </LinearLayout>
 

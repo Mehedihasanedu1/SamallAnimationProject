@@ -16,6 +16,7 @@ import java.util.List;
 public class InformationAdaptar extends RecyclerView.Adapter<InformationAdaptar.InformationViewHolder> {
     private Context context;
     private List<RecyclerViewResponse>recyclerViewResponses;
+    private  int previousposition = 0;
 
      public InformationAdaptar(Context context, List<RecyclerViewResponse> recyclerViewResponses) {
         this.context = context;
@@ -32,6 +33,15 @@ public class InformationAdaptar extends RecyclerView.Adapter<InformationAdaptar.
     @Override
     public void onBindViewHolder(InformationViewHolder holder, int position) {
          holder.title.setText(recyclerViewResponses.get(position).getTitle());
+
+        if(position > previousposition){
+
+            Animation.animate(holder,true);
+        }
+        else{
+            Animation.animate(holder,false);
+        }
+        previousposition = position;
     }
 
     @Override
